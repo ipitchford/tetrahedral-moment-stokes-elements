@@ -1,0 +1,44 @@
+{
+  "title": "A moment obstruction and minimal-degree polynomial nonconforming Stokes elements on tetrahedra",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p><strong>Unrefereed research candidate.</strong> Nonconforming finite elements for Stokes flow are often specified by moments: averages of the velocity against polynomials on each face and inside each cell. Balazi, Allaire, Jolivet and Omnes (Numer. Methods Partial Differential Equations 41(6), e70057, 2025) built tetrahedral elements of second and third order this way and left open whether a fourth-order element can be obtained by adding fifteen quintics to the quartics.</p><p>It cannot: an alternating face functional vanishes on every quintic and equals 1/34650 on the Vandermonde sextic of the barycentric coordinates, which repairs the element and gives a 50-dimensional vertex-invariant fourth-order element (proof; exact). For face moments of degree n and cell moments of degree n-1 the moments are injective on P_(n+1), their kernel on P_(n+2) is seven-dimensional for every n with an explicit Jacobi/Legendre ridge basis, they miss exactly (n-1)(n-2)/2 directions there and are surjective on P_(n+3); the minimum degree is n+2 for n=1,2 and n+3 for n&gt;=3 (proof), for single-cell polynomial spaces containing P_(n+1). Vertex-invariant elements with the fewest top-degree directions exist for every n (proof), explicitly for n=4,5, with an explicit family checked to n=8. Triangles never need an extra degree (proof); d-simplex statements are proved, checked or conjectured as labelled. A numerical Stokes test shows rates consistent with fourth-order convergence with computed discrete inf-sup values 0.40-0.37 on four meshes.</p><p>The archive contains the manuscript (PDF and LaTeX), exact verifiers and the numerical Stokes code with deterministic certificates, a replay script that regenerates every certificate byte for byte, semantic negative controls and SHA-256 sums. Assurance: written proofs; exact checks; producer-side replay including a clean full replay in a separate copy; internal AI-assisted review, AI-assisted adversarial review (OpenAI gpt-5.6-sol) and a verification re-review. This is not peer review, independent reproduction or formal verification. Creator: Anonymous. Prose, manuscript and data CC0-1.0; code MIT.</p>",
+  "creators": [
+    {
+      "name": "Anonymous"
+    }
+  ],
+  "version": "1.0.0-candidate",
+  "doi": "10.5281/zenodo.23565002",
+  "publication_date": "2026-10-22",
+  "access_right": "open",
+  "license": "cc-zero",
+  "keywords": [
+    "nonconforming finite elements",
+    "Stokes equations",
+    "unisolvence",
+    "tetrahedral elements",
+    "moment degrees of freedom",
+    "inf-sup stability",
+    "Jacobi polynomials",
+    "Vandermonde polynomial"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ipitchford/tetrahedral-moment-stokes-elements/tree/v1.0.0-candidate",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://evidencepress.org/releases/tetrahedral-moment-stokes-elements/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.1002/num.70057",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "Original code (Python scripts, CI workflow) is released under the MIT licence; see LICENSES.md in the archive. Short quotations of the source remain the source authors' text."
+}

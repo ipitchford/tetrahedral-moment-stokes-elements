@@ -1,0 +1,670 @@
+{
+ "all_checks_pass": true,
+ "delta_closed_form_binomial": "delta(d,n) = sum_{r=3}^{min(d,n)} C(d,r) [ (r-2) C(n,r-1) - C(n,r-2) + 1 ]",
+ "delta_closed_form_binomial_checked_d1..12_n1..40": true,
+ "delta_polynomial_in_n_per_d": {
+  "2": {
+   "agrees": true,
+   "checked_n_range": [
+    1,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {},
+   "polynomial_in_n": "0",
+   "valid_for_n_>=": 1
+  },
+  "3": {
+   "agrees": true,
+   "checked_n_range": [
+    1,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {},
+   "polynomial_in_n": "(n - 2)*(n - 1)/2",
+   "valid_for_n_>=": 1
+  },
+  "4": {
+   "agrees": true,
+   "checked_n_range": [
+    2,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {
+    "1": [
+     0,
+     1
+    ]
+   },
+   "polynomial_in_n": "(n - 2)*(n + 5)*(2*n - 3)/6",
+   "valid_for_n_>=": 2
+  },
+  "5": {
+   "agrees": true,
+   "checked_n_range": [
+    3,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {
+    "1": [
+     0,
+     6
+    ],
+    "2": [
+     0,
+     1
+    ]
+   },
+   "polynomial_in_n": "(n**4 + 6*n**3 - 5*n**2 - 82*n + 128)/8",
+   "valid_for_n_>=": 3
+  },
+  "6": {
+   "agrees": true,
+   "checked_n_range": [
+    4,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {
+    "1": [
+     0,
+     22
+    ],
+    "2": [
+     0,
+     7
+    ],
+    "3": [
+     20,
+     21
+    ]
+   },
+   "polynomial_in_n": "(4*n**5 + 45*n**4 + 110*n**3 - 405*n**2 - 2154*n + 5040)/120",
+   "valid_for_n_>=": 4
+  },
+  "7": {
+   "agrees": true,
+   "checked_n_range": [
+    5,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {
+    "1": [
+     0,
+     64
+    ],
+    "2": [
+     0,
+     29
+    ],
+    "3": [
+     35,
+     43
+    ],
+    "4": [
+     210,
+     211
+    ]
+   },
+   "polynomial_in_n": "(5*n**6 + 87*n**5 + 485*n**4 + 345*n**3 - 5890*n**2 - 20232*n + 71280)/720",
+   "valid_for_n_>=": 5
+  },
+  "8": {
+   "agrees": true,
+   "checked_n_range": [
+    6,
+    40
+   ],
+   "n_below_range_where_polynomial_differs_[delta,poly]": {
+    "1": [
+     0,
+     163
+    ],
+    "2": [
+     0,
+     93
+    ],
+    "3": [
+     56,
+     93
+    ],
+    "4": [
+     378,
+     387
+    ],
+    "5": [
+     1442,
+     1443
+    ]
+   },
+   "polynomial_in_n": "(2*n**7 + 49*n**6 + 441*n**5 + 1505*n**4 - 1547*n**3 - 25914*n**2 - 68616*n + 367920)/1680",
+   "valid_for_n_>=": 6
+  }
+ },
+ "delta_sign_pattern": {
+  "delta(2,n)=0_for_n<=40": true,
+  "delta(d,1)=delta(d,2)=0_for_d<=12": true,
+  "delta(d,3)=C(d,3)_for_d<=12": true,
+  "delta(d,n)>0_for_3<=d<=12,3<=n<=40": true
+ },
+ "delta_table_d2..8_n1..10": {
+  "2": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "3": [
+   0,
+   0,
+   1,
+   3,
+   6,
+   10,
+   15,
+   21,
+   28,
+   36
+  ],
+  "4": [
+   0,
+   0,
+   4,
+   15,
+   35,
+   66,
+   110,
+   169,
+   245,
+   340
+  ],
+  "5": [
+   0,
+   0,
+   10,
+   45,
+   121,
+   256,
+   471,
+   790,
+   1240,
+   1851
+  ],
+  "6": [
+   0,
+   0,
+   20,
+   105,
+   321,
+   756,
+   1526,
+   2780,
+   4704,
+   7525
+  ],
+  "7": [
+   0,
+   0,
+   35,
+   210,
+   721,
+   1876,
+   4131,
+   8135,
+   14778,
+   25243
+  ],
+  "8": [
+   0,
+   0,
+   56,
+   378,
+   1442,
+   4116,
+   9836,
+   20847,
+   40503,
+   73627
+  ]
+ },
+ "description": "Deficit delta(d,n) and exact ranks of M_{d,n}",
+ "prime": "2^61-1",
+ "rank_cases": [
+  {
+   "N": 7,
+   "P_n+2": {
+    "columns": 10,
+    "degree": 3,
+    "method": "exact_rational_elimination",
+    "rank": 7,
+    "rows": 7
+   },
+   "P_n+3": {
+    "columns": 15,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 7,
+    "rows": 7
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 1,
+   "predicted_rank_P_n+2": 7,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 12,
+   "P_n+2": {
+    "columns": 15,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 12,
+    "rows": 12
+   },
+   "P_n+3": {
+    "columns": 21,
+    "degree": 5,
+    "method": "exact_rational_elimination",
+    "rank": 12,
+    "rows": 12
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 2,
+   "predicted_rank_P_n+2": 12,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 18,
+   "P_n+2": {
+    "columns": 21,
+    "degree": 5,
+    "method": "exact_rational_elimination",
+    "rank": 18,
+    "rows": 18
+   },
+   "P_n+3": {
+    "columns": 28,
+    "degree": 6,
+    "method": "exact_rational_elimination",
+    "rank": 18,
+    "rows": 18
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 3,
+   "predicted_rank_P_n+2": 18,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 25,
+   "P_n+2": {
+    "columns": 28,
+    "degree": 6,
+    "method": "exact_rational_elimination",
+    "rank": 25,
+    "rows": 25
+   },
+   "P_n+3": {
+    "columns": 36,
+    "degree": 7,
+    "method": "exact_rational_elimination",
+    "rank": 25,
+    "rows": 25
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 4,
+   "predicted_rank_P_n+2": 25,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 33,
+   "P_n+2": {
+    "columns": 36,
+    "degree": 7,
+    "method": "exact_rational_elimination",
+    "rank": 33,
+    "rows": 33
+   },
+   "P_n+3": {
+    "columns": 45,
+    "degree": 8,
+    "method": "exact_rational_elimination",
+    "rank": 33,
+    "rows": 33
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 5,
+   "predicted_rank_P_n+2": 33,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 42,
+   "P_n+2": {
+    "columns": 45,
+    "degree": 8,
+    "method": "exact_rational_elimination",
+    "rank": 42,
+    "rows": 42
+   },
+   "P_n+3": {
+    "columns": 55,
+    "degree": 9,
+    "method": "exact_rational_elimination",
+    "rank": 42,
+    "rows": 42
+   },
+   "d": 2,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 3,
+   "n": 6,
+   "predicted_rank_P_n+2": 42,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 21,
+   "P_n+2": {
+    "columns": 35,
+    "degree": 3,
+    "method": "exact_rational_elimination",
+    "rank": 21,
+    "rows": 21
+   },
+   "P_n+3": {
+    "columns": 70,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 21,
+    "rows": 21
+   },
+   "d": 4,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 14,
+   "n": 1,
+   "predicted_rank_P_n+2": 21,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 55,
+   "P_n+2": {
+    "columns": 70,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 55,
+    "rows": 55
+   },
+   "P_n+3": {
+    "columns": 126,
+    "degree": 5,
+    "method": "exact_rational_elimination",
+    "rank": 55,
+    "rows": 55
+   },
+   "d": 4,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 15,
+   "n": 2,
+   "predicted_rank_P_n+2": 55,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 115,
+   "P_n+2": {
+    "columns": 126,
+    "degree": 5,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 111,
+    "rows": 115
+   },
+   "P_n+3": {
+    "columns": 210,
+    "degree": 6,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 115,
+    "rows": 115
+   },
+   "d": 4,
+   "deficit_P_n+2": 4,
+   "kernel_dim_k(d,n+2)": 15,
+   "n": 3,
+   "predicted_rank_P_n+2": 111,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 210,
+   "P_n+2": {
+    "columns": 210,
+    "degree": 6,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 195,
+    "rows": 210
+   },
+   "P_n+3": {
+    "columns": 330,
+    "degree": 7,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 210,
+    "rows": 210
+   },
+   "d": 4,
+   "deficit_P_n+2": 15,
+   "kernel_dim_k(d,n+2)": 15,
+   "n": 4,
+   "predicted_rank_P_n+2": 195,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 350,
+   "P_n+2": {
+    "columns": 330,
+    "degree": 7,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 315,
+    "rows": 350
+   },
+   "P_n+3": {
+    "columns": 495,
+    "degree": 8,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 350,
+    "rows": 350
+   },
+   "d": 4,
+   "deficit_P_n+2": 35,
+   "kernel_dim_k(d,n+2)": 15,
+   "n": 5,
+   "predicted_rank_P_n+2": 315,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 31,
+   "P_n+2": {
+    "columns": 56,
+    "degree": 3,
+    "method": "exact_rational_elimination",
+    "rank": 31,
+    "rows": 31
+   },
+   "P_n+3": {
+    "columns": 126,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 31,
+    "rows": 31
+   },
+   "d": 5,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 25,
+   "n": 1,
+   "predicted_rank_P_n+2": 31,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 96,
+   "P_n+2": {
+    "columns": 126,
+    "degree": 4,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 96,
+    "rows": 96
+   },
+   "P_n+3": {
+    "columns": 252,
+    "degree": 5,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 96,
+    "rows": 96
+   },
+   "d": 5,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 30,
+   "n": 2,
+   "predicted_rank_P_n+2": 96,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 231,
+   "P_n+2": {
+    "columns": 252,
+    "degree": 5,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 221,
+    "rows": 231
+   },
+   "P_n+3": {
+    "columns": 462,
+    "degree": 6,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 231,
+    "rows": 231
+   },
+   "d": 5,
+   "deficit_P_n+2": 10,
+   "kernel_dim_k(d,n+2)": 31,
+   "n": 3,
+   "predicted_rank_P_n+2": 221,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 476,
+   "P_n+2": {
+    "columns": 462,
+    "degree": 6,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 431,
+    "rows": 476
+   },
+   "P_n+3": {
+    "columns": 792,
+    "degree": 7,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 476,
+    "rows": 476
+   },
+   "d": 5,
+   "deficit_P_n+2": 45,
+   "kernel_dim_k(d,n+2)": 31,
+   "n": 4,
+   "predicted_rank_P_n+2": 431,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 43,
+   "P_n+2": {
+    "columns": 84,
+    "degree": 3,
+    "method": "exact_rational_elimination",
+    "rank": 43,
+    "rows": 43
+   },
+   "P_n+3": {
+    "columns": 210,
+    "degree": 4,
+    "method": "exact_rational_elimination",
+    "rank": 43,
+    "rows": 43
+   },
+   "d": 6,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 41,
+   "n": 1,
+   "predicted_rank_P_n+2": 43,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 154,
+   "P_n+2": {
+    "columns": 210,
+    "degree": 4,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 154,
+    "rows": 154
+   },
+   "P_n+3": {
+    "columns": 462,
+    "degree": 5,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 154,
+    "rows": 154
+   },
+   "d": 6,
+   "deficit_P_n+2": 0,
+   "kernel_dim_k(d,n+2)": 56,
+   "n": 2,
+   "predicted_rank_P_n+2": 154,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  },
+  {
+   "N": 420,
+   "P_n+2": {
+    "columns": 462,
+    "degree": 5,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 400,
+    "rows": 420
+   },
+   "P_n+3": {
+    "columns": 924,
+    "degree": 6,
+    "method": "modular_rank_p_2^61-1_lower_bound",
+    "rank": 420,
+    "rows": 420
+   },
+   "d": 6,
+   "deficit_P_n+2": 20,
+   "kernel_dim_k(d,n+2)": 62,
+   "n": 3,
+   "predicted_rank_P_n+2": 400,
+   "rank_P_n+2_matches_prediction": true,
+   "surjective_on_P_n+3": true
+  }
+ ]
+}

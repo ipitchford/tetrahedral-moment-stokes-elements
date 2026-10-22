@@ -1,0 +1,8 @@
+# Provenance
+
+* Scholarly creator: **Anonymous** (standing Evidence Press attribution). No human research contribution is claimed or inferred.
+* Publisher: Evidence Press (https://evidencepress.org). Repository maintenance and publication operations: the Evidence Press publishing workflow under the repository owner's account; this is not authorship.
+* Production: AI-assisted research. The manuscript, proofs and computations were produced by AI research agents. Internal AI-assisted review in several roles (editor, methodology, domain, perspective and devil's-advocate), an AI-assisted adversarial review by a different model (OpenAI gpt-5.6-sol) and a verification re-review were used to find errors. Their substantive points and responses are summarised in [REVIEW_SUMMARY.md](REVIEW_SUMMARY.md); the original reports are kept privately.
+* Target: Balazi, Allaire, Jolivet and Omnes, Numer. Methods Partial Differential Equations 41(6) (2025), e70057, doi:10.1002/num.70057; short quotations from the open version hal-04541809v3 are reproduced with attribution. Third-party texts are not redistributed.
+* History: earlier unpublished drafts were revised on 22 October 2026 in response to the internal reviews. Only this version is published.
+* Publication edit: the changes made at publication were inserting the reserved DOI in the manuscript, README and `target.yaml`; rebuilding the PDF; adding `negative_controls.py`, the release records (STATUS, ASSURANCE, PROVENANCE, AI_INDEX, CLAIMS, RESEARCH_GATES, REVIEW_SUMMARY, licences, citation and Zenodo metadata, ENVIRONMENT, CI workflow); and regenerating SHA256SUMS. No code or certificate was changed.

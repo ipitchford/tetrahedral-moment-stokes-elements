@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "Please cite this versioned research candidate by its DOI."
+title: "A moment obstruction and minimal-degree polynomial nonconforming Stokes elements on tetrahedra"
+type: software
+authors:
+  - name: Anonymous
+version: 1.0.0-candidate
+doi: 10.5281/zenodo.23565002
+date-released: 2026-10-22
+repository-code: "https://github.com/ipitchford/tetrahedral-moment-stokes-elements"
+url: "https://evidencepress.org/releases/tetrahedral-moment-stokes-elements/"
+license: CC0-1.0
+keywords:
+  - nonconforming finite elements
+  - Stokes equations
+  - unisolvence
+  - tetrahedral elements
+  - moment degrees of freedom
+abstract: "Balazi, Allaire, Jolivet and Omnes (2025) asked whether a fourth-order moment-based nonconforming Stokes element on tetrahedra can be obtained by adding fifteen quintics to the quartics. It cannot: an alternating face functional vanishes on all quintics and equals 1/34650 on the Vandermonde sextic, which repairs the element (proof). For face moments of degree n and cell moments of degree n-1 the kernel on P_(n+2) is seven-dimensional for every n, degree n+2 misses (n-1)(n-2)/2 directions and degree n+3 is necessary and sufficient for n>=3 (proof). Minimal symmetric enrichments exist for every n (proof); triangles never need extra degree; a numerical Stokes test shows rates consistent with fourth order. Unrefereed candidate. Original code is MIT-licensed; see LICENSES.md."
+references:
+  - type: article
+    title: "Inf-sup stable non-conforming finite elements on tetrahedra with second- and third-order accuracy"
+    authors:
+      - family-names: Balazi
+        given-names: Loïc
+      - family-names: Allaire
+        given-names: Grégoire
+      - family-names: Jolivet
+        given-names: Pierre
+      - family-names: Omnes
+        given-names: Pascal
+    journal: "Numerical Methods for Partial Differential Equations"
+    volume: 41
+    year: 2025
+    doi: 10.1002/num.70057

@@ -1,0 +1,16 @@
+name: Replay
+on:
+  push:
+  pull_request:
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check SHA256SUMS
+        run: sha256sum -c SHA256SUMS
+      - name: Semantic negative controls (standard library, exact)
+        run: python -B -O negative_controls.py

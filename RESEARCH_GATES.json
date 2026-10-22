@@ -1,0 +1,172 @@
+{
+ "schemaVersion": "1.0",
+ "provenance": "Compiled 22 October 2026 at publication from the dated target record and bounded literature audit of the research bundle (search of 20 October 2026), the internal review records and the revision response; private working notes are not included. It documents the scrutiny performed, not historical priority.",
+ "contributionMap": [
+  {
+   "claim": "Seven-dimensional kernel of face-and-cell moments on P_(n+2) for every n, deficit (n-1)(n-2)/2, surjectivity on P_(n+3), sharp minimum degree",
+   "unit": "statement",
+   "paperLocation": "Theorem 2.1; Section 4",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "tetrahedron polynomial moment kernel Jacobi Legendre seven Crouzeix Raviart; tetrahedron moment kernel Jacobi; simplex gradient orthogonal polynomials kernel; exact titles and arXiv identifiers of the closest works",
+     "corpus": "web search engines, arXiv, publisher and author-repository full texts"
+    }
+   ],
+   "closestPriorWork": "Chen, Hu and Zhang (2023): low-order vertex polynomials proportional to the vertex ridges; Ye and Zhang (2021): injectivity on P_(n+1) (their k=n-1) and a lifting via projection onto the image; Ciarlet, Dunkl and Sauter (2018), Sauter and Torres (2023): orthogonal polynomials and symmetry in 3D Crouzeix-Raviart spaces",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Answer to the BAJO quintic question: alternating functional vanishing on P_5 with A(Delta_4)=1/34650",
+   "unit": "statement",
+   "paperLocation": "Proposition 3.2",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "Balazi Allaire Jolivet Omnes fourth order quintic enrichment; citing works of doi 10.1002/num.70057",
+     "corpus": "Wiley full text and HAL open version; web search"
+    }
+   ],
+   "closestPriorWork": "BAJO (2025) Appendix A reports an unsuccessful random search and leaves existence open; no later resolution located",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Minimal enrichment count and existence of vertex-invariant lean elements",
+   "unit": "statement",
+   "paperLocation": "Corollary 5.2; Theorem 5.4; Proposition 5.5",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "symmetric nonconforming Stokes element tetrahedron enrichment minimal; vertex invariant basis face numbering",
+     "corpus": "web search, arXiv"
+    }
+   ],
+   "closestPriorWork": "BAJO Remark 3.6 notes their n=1,2 bases are not symmetric; Maschke averaging and representation theory are classical",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "d-simplex kernel dimension and deficit closed form; triangles need no extra degree",
+   "unit": "statement",
+   "paperLocation": "Section 6",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "Crouzeix-Raviart elements on simplicial meshes in d dimensions; nonconforming arbitrary order triangles Matthies Tobiska",
+     "corpus": "publisher full texts (Bohne-Ciarlet-Sauter 2026 checked against the publisher's text)"
+    }
+   ],
+   "closestPriorWork": "Bohne, Ciarlet and Sauter (2026, Thm 35): obstruction for a different moment pattern (facet tests one degree below the shape functions); Matthies and Tobiska (2005): all orders on triangles",
+   "verdict": "new-in-bounded-search"
+  },
+  {
+   "claim": "Simplex Jacobi operator, Green-identity injectivity, Fortin and error estimates",
+   "unit": "method",
+   "paperLocation": "Sections 4 and 7",
+   "searches": [
+    {
+     "date": "2026-10-20",
+     "query": "Sobolev orthogonal polynomials simplex Aktas Xu operator",
+     "corpus": "publisher full text"
+    }
+   ],
+   "closestPriorWork": "Aktas and Xu (2013); Crouzeix and Raviart (1973); BAJO (2025): credited as established",
+   "verdict": "known-cited"
+  }
+ ],
+ "sourcesReadInFull": [
+  {
+   "citation": "Balazi, Allaire, Jolivet and Omnes (2025), doi:10.1002/num.70057; hal-04541809v3",
+   "usedFor": "The question (Appendix A, quoted), Remarks 3.2 and 3.6, Section 4 stability framework",
+   "readWhat": "Full Wiley text and open version",
+   "date": "2026-10-20",
+   "evidenceLocator": "https://doi.org/10.1002/num.70057; manuscript Section 1.2"
+  },
+  {
+   "citation": "Chen, Hu and Zhang (2023), doi:10.1007/s10915-023-02317-z",
+   "usedFor": "Overlap on low-order vertex polynomials",
+   "readWhat": "Section 3.1, Lemma 1, equations (4) and (11)",
+   "date": "2026-10-20",
+   "evidenceLocator": "manuscript Section 1.5"
+  },
+  {
+   "citation": "Bohne, Ciarlet and Sauter (2026), doi:10.1007/s10208-026-09741-1",
+   "usedFor": "Distinguishing a different moment pattern obstruction",
+   "readWhat": "Section 6.3, Theorem 35, publisher version",
+   "date": "2026-10-20",
+   "evidenceLocator": "manuscript Section 1.5"
+  },
+  {
+   "citation": "Ye and Zhang (2021), doi:10.1016/j.aml.2021.107033",
+   "usedFor": "Injectivity versus surjectivity distinction",
+   "readWhat": "Main lifting theorem",
+   "date": "2026-10-20",
+   "evidenceLocator": "manuscript Section 1.5"
+  }
+ ],
+ "limitationTriage": [
+  {
+   "limitation": "Explicit lean enrichment Delta_4 P_(n-3) only checked to n=8",
+   "closingQuestion": "Is Delta_4 P_(n-3) a valid lean enrichment for every n?",
+   "triedOrSearched": "Existence of lean invariant elements proved by Maschke; explicit family checked exactly n=3..8",
+   "estimatedCost": "research project",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Conjecture 5.6",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Sufficiency of degree n+3 for d>=4 only checked in listed cases",
+   "closingQuestion": "Is M_(d,n) surjective on P_(n+3) for every d>=4?",
+   "triedOrSearched": "Closed-form deficit proved; bounds n+3..n+d proved; modular rank checks d=4,5,6; the bubble argument is special to d=3",
+   "estimatedCost": "research project",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Conjecture 6.4",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Numerical study on one mesh family and one manufactured solution; inf-sup not computed at N=5",
+   "closingQuestion": "Do other meshes or solutions change the observed rates?",
+   "triedOrSearched": "N=1..5 Kuhn meshes; local interpolation rates",
+   "estimatedCost": "days",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Numerical illustration only; mesh independence is proved by the Fortin argument",
+   "whyNotClosedNow": "Memory cost (about 7 GB at N=5) and outside the theorem's scope"
+  },
+  {
+   "limitation": "No comparison with split-mesh conforming or virtual elements",
+   "closingQuestion": "Is the fourth-order element competitive in cost?",
+   "triedOrSearched": "Qualitative DOF counts in Section 9",
+   "estimatedCost": "research project",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Dedicated performance study",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Sobolev-orthogonal-polynomial literature not searched specifically for a prior kernel statement",
+   "closingQuestion": "Does the orthogonal-polynomial literature contain the seven-ridge kernel in other terminology?",
+   "triedOrSearched": "Bounded finite-element search; Aktas-Xu credited for the operator",
+   "estimatedCost": "hours",
+   "cheap": true,
+   "decision": "OPEN",
+   "reasonOpen": "Noted by the internal review; no priority is claimed",
+   "whyNotClosedNow": "Publication-stage search would not change any claim or label; recorded as a remaining priority uncertainty"
+  }
+ ],
+ "extensionScout": {
+  "by": "internal AI-assisted first-round review and AI-assisted adversarial review (OpenAI gpt-5.6-sol)",
+  "date": "2026-10-22",
+  "proposals": [
+   "E1 higher-dimensional simplices",
+   "E2 minimal symmetric enrichments for every n",
+   "E3 numerical Stokes test"
+  ],
+  "actions": [
+   "E1 deficit closed form and degree bounds proved; n+3 checked for d=4,5,6 in listed cases; general d conjectured",
+   "E2 minimal count and existence proved; explicit n=4,5; family checked to n=8",
+   "E3 Kuhn-mesh convergence and inf-sup values reported (numerical)"
+  ]
+ }
+}

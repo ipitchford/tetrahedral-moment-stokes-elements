@@ -1,0 +1,62 @@
+target_id: sharp-degree-tetrahedral-face-volume-moments
+revision_date: 2026-10-22
+intended_contribution_unit: theorem_and_construction
+claim:
+  exact_statement: |
+    Let M_n collect all normalised moments on each face of a tetrahedron
+    against P_n and all cell moments against P_(n-1), n >= 1. Its kernel on
+    P_(n+2) has dimension exactly seven and is spanned by four vertex Jacobi
+    ridges and three complementary-pair Legendre ridges. The number of missing
+    moment directions on P_(n+2) is (n-1)(n-2)/2, and M_n is surjective on
+    P_(n+3). Among single-cell polynomial spaces containing P_(n+1) on which
+    exactly these moments are unisolvent, the minimum degree is n+2 for n=1,2
+    and n+3 for n>=3. Every such space has at least (n-1)(n-2)/2 directions
+    outside P_(n+2), and vertex-invariant spaces attaining this exist for
+    every n. For n=3 the alternating face functional vanishes on P_5 and
+    equals 1/34650 on the Vandermonde sextic, which answers the quintic question
+    of the source in the negative. A 50-dimensional vertex-invariant element
+    with one sextic is given explicitly.
+  evidence_labels:
+    proof: [kernel theorem, deficit, surjectivity on P_(n+3) for d=3, minimum degree, alternating obstruction, minimal enrichment count, existence of lean invariant elements, d-simplex kernel dimension, deficit closed form c(d,n), 2D corollary, 14-monomial basis, Fortin and error estimates]
+    exact_computation: [cokernel character sgn x Sym^(n-3)(std) via a generating-function identity, lean element P_(n+2)+Delta4*P_(n-3) for n=3..8, explicit n=4 and n=5 elements, surjectivity on P_(n+3) for d=4 n<=5, d=5 n<=4, d=6 n=3]
+    numerical: [Stokes convergence rates for n=3 on Kuhn meshes N=1..5, discrete inf-sup constants N=1..4, conditioning of local bases]
+    conjecture: [lean enrichment Delta4*P_(n-3) for all n, sharp degree n+3 on every d-simplex with d>=3]
+  exclusions:
+    - Degree optimality is relative to the specified moments, single-cell polynomial spaces and reproduction of P_(n+1).
+    - No minimum-degree assertion for split-cell, nonpolynomial or virtual element spaces, or for all Stokes elements.
+    - No pointwise divergence-free or pressure-robustness assertion.
+    - No p-uniform stability, curved-element result, discrete Korn inequality or solver-speed claim.
+    - Lean elements for n>=5 are given by an existence theorem; the explicit choice Delta4*P_(n-3) is verified only for n<=8.
+    - Sharp degree n+3 is proved only for d=3 (and n+2 for d=2).
+source:
+  originating_reference: "Balazi, Allaire, Jolivet and Omnes (2025), Appendix A, open question for the case n=3; Remarks 3.2 and 3.6"
+  doi: "https://doi.org/10.1002/num.70057"
+  open_version: "https://hal.science/hal-04541809v3"
+normalisation:
+  barycentric_coordinates: "lambda_0,...,lambda_3; sum lambda_i = 1"
+  measures: "Every face and cell integral divided by that face area or cell volume."
+  polynomial_degree: "Total degree on the affine simplex; m = n+2."
+  vandermonde: "Delta_4 = product_(i<j)(lambda_j-lambda_i)."
+  kernel:
+    vertex: "lambda_i J_(m-1)^(1,1)(2 lambda_i-1), i=0,...,3"
+    pair: "J_m(2(lambda_0+lambda_j)-1), j=1,2,3 (Legendre)"
+  symmetric_metric: "Sum of the six edge-direction Dirichlet forms, normalised by volume."
+fingerprints:
+  number_of_dofs: "N_n = 4 binom(n+2,2) + binom(n+2,3)"
+  rank: "binom(n+5,3)-7"
+  deficit: "(n-1)(n-2)/2"
+  deficit_d_simplex: "sum_(r=3)^min(d,n) binom(d,r)[(r-2)binom(n,r-1)-binom(n,r-2)+1]"
+  obstruction_value: "A(Delta_4)=1/34650"
+  determinant: "-1/(2^174 3^112 5^65 7^46 11) for the ordered 50-column certificate"
+  numerical_rates_N5: "H1 velocity 3.90, L2 velocity 4.89, L2 pressure 4.04"
+  infsup_N1_to_4: [0.4017, 0.3817, 0.3743, 0.3702]
+sequences:
+  n_values: [1,2,3,4,5,6,7,8]
+  number_of_dofs: [13,28,50,80,119,168,228,300]
+  ranks_on_P_n_plus_2: [13,28,49,77,113,158,213,279]
+  deficits: [0,0,1,3,6,10,15,21]
+  kernel_dimensions: [7,7,7,7,7,7,7,7]
+replay:
+  command: "python3 code/verify_all.py"
+  checksums: SHA256SUMS
+  archive_doi: "10.5281/zenodo.23565002"

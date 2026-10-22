@@ -1,0 +1,180 @@
+{
+ "conditioning": {
+  "note": "the orthonormal construction is barycentric and the functionals are normalised, so its moment matrix is identical on every affine tetrahedron; the naive basis uses Cartesian monomials of the given element (origin at vertex 0)",
+  "reference_stiffness_nodal_basis_nonconstant_subspace": 723.0,
+  "reference_tet": {
+   "naive_basis_monomial_tests": 65700000.0,
+   "naive_basis_outside_V_residual": "<=1e-11",
+   "orthonormal_basis_orthonormal_tests": 7.63
+  },
+  "regular_tet_edge1": {
+   "naive_basis_monomial_tests": 39130000.0,
+   "naive_basis_outside_V_residual": "<=1e-11",
+   "orthonormal_basis_orthonormal_tests": 7.63
+  }
+ },
+ "convergence": [
+  {
+   "N": 1,
+   "h": 1.732,
+   "interior_faces": 6,
+   "pressure_L2_error": 0.9318,
+   "pressure_dofs": 120,
+   "tets": 6,
+   "velocity_H1_broken_seminorm_error": 4.638,
+   "velocity_L2_error": 0.2791,
+   "velocity_dofs": 360
+  },
+  {
+   "N": 2,
+   "h": 0.866,
+   "interior_faces": 72,
+   "pressure_L2_error": 0.1414,
+   "pressure_dofs": 960,
+   "rate_pressure_L2": 2.72,
+   "rate_velocity_H1": 2.835,
+   "rate_velocity_L2": 3.506,
+   "tets": 48,
+   "velocity_H1_broken_seminorm_error": 0.6501,
+   "velocity_L2_error": 0.02457,
+   "velocity_dofs": 3600
+  },
+  {
+   "N": 3,
+   "h": 0.5774,
+   "interior_faces": 270,
+   "pressure_L2_error": 0.02268,
+   "pressure_dofs": 3240,
+   "rate_pressure_L2": 4.514,
+   "rate_velocity_H1": 4.088,
+   "rate_velocity_L2": 5.179,
+   "tets": 162,
+   "velocity_H1_broken_seminorm_error": 0.1239,
+   "velocity_L2_error": 0.003009,
+   "velocity_dofs": 12960
+  },
+  {
+   "N": 4,
+   "h": 0.433,
+   "interior_faces": 672,
+   "pressure_L2_error": 0.007201,
+   "pressure_dofs": 7680,
+   "rate_pressure_L2": 3.988,
+   "rate_velocity_H1": 3.828,
+   "rate_velocity_L2": 4.825,
+   "tets": 384,
+   "velocity_H1_broken_seminorm_error": 0.04119,
+   "velocity_L2_error": 0.0007508,
+   "velocity_dofs": 31680
+  },
+  {
+   "N": 5,
+   "h": 0.3464,
+   "interior_faces": 1350,
+   "pressure_L2_error": 0.002924,
+   "pressure_dofs": 15000,
+   "rate_pressure_L2": 4.038,
+   "rate_velocity_H1": 3.895,
+   "rate_velocity_L2": 4.892,
+   "tets": 750,
+   "velocity_H1_broken_seminorm_error": 0.01727,
+   "velocity_L2_error": 0.000252,
+   "velocity_dofs": 63000
+  }
+ ],
+ "inf_sup": {
+  "definition": "beta_h^2 = smallest eigenvalue of B A^{-1} B^T q = beta^2 M q on mean-zero pressures (the single near-zero eigenvalue is the constant pressure)",
+  "values": [
+   {
+    "N": 1,
+    "beta_h": 0.4017,
+    "largest_eigenvalue": 1.32,
+    "near_zero_eigenvalues": 1
+   },
+   {
+    "N": 2,
+    "beta_h": 0.3817,
+    "largest_eigenvalue": 1.651,
+    "near_zero_eigenvalues": 1
+   },
+   {
+    "N": 3,
+    "beta_h": 0.3743,
+    "largest_eigenvalue": 1.729,
+    "near_zero_eigenvalues": 1
+   },
+   {
+    "N": 4,
+    "beta_h": 0.3702,
+    "largest_eigenvalue": 1.751,
+    "near_zero_eigenvalues": 1
+   }
+  ]
+ },
+ "interpolation": {
+  "random_quartic_max_relative_error": "<=1e-12",
+  "smooth_function_shrinking_element": [
+   {
+    "H1_seminorm_error_normalised": 9.475e-05,
+    "L2_error_normalised": 2.043e-06,
+    "h_factor": 0.5
+   },
+   {
+    "H1_seminorm_error_normalised": 6.49e-06,
+    "L2_error_normalised": 8.275e-08,
+    "h_factor": 0.25,
+    "rate_H1": 3.868,
+    "rate_L2": 4.626
+   },
+   {
+    "H1_seminorm_error_normalised": 4.276e-07,
+    "L2_error_normalised": 2.878e-09,
+    "h_factor": 0.125,
+    "rate_H1": 3.924,
+    "rate_L2": 4.846
+   },
+   {
+    "H1_seminorm_error_normalised": 2.733e-08,
+    "L2_error_normalised": 9.385e-11,
+    "h_factor": 0.0625,
+    "rate_H1": 3.968,
+    "rate_L2": 4.938
+   }
+  ]
+ },
+ "label": "numerical (floating point); not a proof",
+ "local_sanity": {
+  "M3_on_V_smallest_singular_value": 0.6091,
+  "aB_Delta4_P5_max": "<=1e-12",
+  "dim_V": 50,
+  "orthonormality_error_P6": "<=1e-11",
+  "rank_M3_on_P5": 49,
+  "rank_of_V_plus_P4": 50,
+  "ridge_moments_max": "<=1e-12",
+  "ridges_in_P5_residual": "<=1e-12"
+ },
+ "parameters": {
+  "N_values": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "domain": "unit cube, N^3 subcubes, 6 Kuhn tetrahedra each",
+  "exact_solution": "u = curl(phi,phi,phi), phi = sin^2(pi x) sin^2(pi y) sin^2(pi z); p = cos(pi x) cos(pi y) cos(pi z)",
+  "face_quadrature_basis": "collapsed Gauss-Jacobi, 5 points per direction (degree 9)",
+  "face_test_orientation": "face barycentrics ordered by increasing global vertex index",
+  "inf_sup_N_values": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "local_basis": "L2-orthonormal basis of V inside an orthonormal P_6 basis; orthonormal P_3(F) and P_2(K) tests",
+  "nu": 1,
+  "pressure": "discontinuous P_3, mean zero via Lagrange multiplier",
+  "velocity": "3 components in the nonconforming M_3 space, boundary face moments zero",
+  "volume_quadrature": "collapsed Gauss-Jacobi, 8 points per direction (degree 15)"
+ }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "1.0",
+  "slug": "tetrahedral-moment-stokes-elements",
+  "version": "1.0.0-candidate",
+  "doi": "10.5281/zenodo.23565002",
+  "source": {
+    "citation": "Balazi, Allaire, Jolivet and Omnes (2025), Numer. Methods Partial Differential Equations 41(6), e70057",
+    "doi": "10.1002/num.70057",
+    "openVersion": "https://hal.science/hal-04541809v3",
+    "question": "Appendix A: existence of a quintic enrichment Sigma_5(K) for the fourth-order space V_4(K) (n=3)"
+  },
+  "claims": [
+    {
+      "id": "kernel-theorem",
+      "statement": "For every n>=1 the face (P_n) and cell (P_(n-1)) moment map M_n is injective on P_(n+1), has a 7-dimensional kernel on P_(n+2) spanned by four vertex Jacobi ridges and three pair Legendre ridges, rank C(n+5,3)-7, deficit (n-1)(n-2)/2, and is surjective on P_(n+3).",
+      "location": "Theorem 2.1",
+      "status": "proof",
+      "checks": "exact ranks n=1..6 (certificates/tetrahedron_exact.json)"
+    },
+    {
+      "id": "minimum-degree",
+      "statement": "Minimum degree of a single-cell polynomial space containing P_(n+1) unisolvent for M_n: n+2 for n=1,2; n+3 for n>=3.",
+      "location": "Theorem 2.1",
+      "status": "proof"
+    },
+    {
+      "id": "quintic-obstruction",
+      "statement": "For n=3 the alternating face functional A vanishes on P_5 and A(Delta_4)=1/34650; no 15-dimensional quintic enrichment of P_4 exists.",
+      "location": "Proposition 3.2",
+      "status": "proof",
+      "checks": "exact (tetrahedron_exact.json, independent_check.json, negative_controls.py)"
+    },
+    {
+      "id": "minimal-enrichment",
+      "statement": "Every admissible space has at least (n-1)(n-2)/2 directions outside P_(n+2); vertex-invariant spaces attaining this exist for every n.",
+      "location": "Corollary 5.2; Theorem 5.4",
+      "status": "proof"
+    },
+    {
+      "id": "cokernel-representation",
+      "statement": "The missing directions form sgn x Sym^(n-3)(std) of S_4.",
+      "location": "Proposition 5.5",
+      "status": "exact computation (generating-function identity)"
+    },
+    {
+      "id": "lean-explicit",
+      "statement": "P_(n+2)+Delta_4 P_(n-3) gives a lean element for n=3..8; explicit n=4 and n=5 elements.",
+      "location": "Section 5.4",
+      "status": "exact computation",
+      "checks": "certificates/lean_element_exact.json"
+    },
+    {
+      "id": "lean-all-n",
+      "statement": "Delta_4 P_(n-3) is a lean enrichment for every n.",
+      "location": "Conjecture 5.6",
+      "status": "conjecture"
+    },
+    {
+      "id": "fourth-order-element",
+      "statement": "V_3^* = (a_B-orthogonal complement of the ridges in P_5) + span{Delta_4} has dimension 50, contains P_4, is unisolvent and vertex-invariant; 14-monomial basis.",
+      "location": "Corollary 5.8; Proposition 5.9",
+      "status": "proof",
+      "checks": "exact determinant -1/(2^174 3^112 5^65 7^46 11)"
+    },
+    {
+      "id": "d-simplex",
+      "statement": "Kernel dimension sum_(r=1)^min(d,n+2) C(d,r); closed-form deficit zero exactly when d=2 or n<=2; triangles never need extra degree; minimum degree between n+3 and n+d for d>=3, n>=3.",
+      "location": "Theorem 6.1; Proposition 6.2; Corollary 6.3",
+      "status": "proof"
+    },
+    {
+      "id": "d-simplex-checked",
+      "statement": "M_(d,n) surjective on P_(n+3) for d=4 (n<=5), d=5 (n<=4), d=6 (n=3).",
+      "location": "Section 6",
+      "status": "exact computation (full rank modulo 2^61-1)"
+    },
+    {
+      "id": "d-simplex-conjecture",
+      "statement": "Degree n+3 suffices on every d-simplex, d>=4.",
+      "location": "Conjecture 6.4",
+      "status": "conjecture"
+    },
+    {
+      "id": "stokes-numerics",
+      "statement": "V_3^* with discontinuous P_3 pressure on Kuhn meshes: rates consistent with fourth-order convergence (N=5: 3.90 broken H1 velocity, 4.89 L2 velocity, 4.04 pressure); computed discrete inf-sup values 0.4017, 0.3817, 0.3743, 0.3702 for N=1..4.",
+      "location": "Section 8",
+      "status": "numerical",
+      "checks": "certificates/stokes_n3_numerical.json"
+    }
+  ],
+  "exclusions": [
+    "No minimum-degree assertion for split-cell, nonpolynomial or virtual element spaces, or for all Stokes elements.",
+    "No pointwise divergence-free or pressure-robustness assertion.",
+    "No p-uniform stability, curved-element result, discrete Korn inequality or solver-speed claim."
+  ]
+}

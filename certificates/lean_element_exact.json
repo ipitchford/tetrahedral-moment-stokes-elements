@@ -1,0 +1,390 @@
+{
+ "W_n_invariance": "P_{n+2} and P_{n-3} are invariant under vertex permutations and Delta4 o sigma = sgn(sigma) Delta4 (checked in tetrahedron_exact.json)",
+ "all_checks_pass": true,
+ "cokernel_character": {
+  "class_order": [
+   "e",
+   "(12)",
+   "(12)(34)",
+   "(123)",
+   "(1234)"
+  ],
+  "class_sizes": [
+   1,
+   6,
+   3,
+   8,
+   6
+  ],
+  "generating_function_identity": {
+   "(12)": {
+    "identity_holds": true,
+    "lhs_minus_rhs": "0"
+   },
+   "(12)(34)": {
+    "identity_holds": true,
+    "lhs_minus_rhs": "0"
+   },
+   "(123)": {
+    "identity_holds": true,
+    "lhs_minus_rhs": "0"
+   },
+   "(1234)": {
+    "identity_holds": true,
+    "lhs_minus_rhs": "0"
+   },
+   "e": {
+    "identity_holds": true,
+    "lhs_minus_rhs": "0"
+   }
+  },
+  "identity_holds_for_all_n_>=1": true,
+  "std_character": [
+   3,
+   1,
+   -1,
+   0,
+   -1
+  ],
+  "termwise_n3..12": [
+   {
+    "cokernel_character": [
+     1,
+     -1,
+     1,
+     1,
+     -1
+    ],
+    "dimension": 1,
+    "equal": true,
+    "n": 3,
+    "sign_x_Sym^(n-3)(std)": [
+     1,
+     -1,
+     1,
+     1,
+     -1
+    ]
+   },
+   {
+    "cokernel_character": [
+     3,
+     -1,
+     -1,
+     0,
+     1
+    ],
+    "dimension": 3,
+    "equal": true,
+    "n": 4,
+    "sign_x_Sym^(n-3)(std)": [
+     3,
+     -1,
+     -1,
+     0,
+     1
+    ]
+   },
+   {
+    "cokernel_character": [
+     6,
+     -2,
+     2,
+     0,
+     0
+    ],
+    "dimension": 6,
+    "equal": true,
+    "n": 5,
+    "sign_x_Sym^(n-3)(std)": [
+     6,
+     -2,
+     2,
+     0,
+     0
+    ]
+   },
+   {
+    "cokernel_character": [
+     10,
+     -2,
+     -2,
+     1,
+     0
+    ],
+    "dimension": 10,
+    "equal": true,
+    "n": 6,
+    "sign_x_Sym^(n-3)(std)": [
+     10,
+     -2,
+     -2,
+     1,
+     0
+    ]
+   },
+   {
+    "cokernel_character": [
+     15,
+     -3,
+     3,
+     0,
+     -1
+    ],
+    "dimension": 15,
+    "equal": true,
+    "n": 7,
+    "sign_x_Sym^(n-3)(std)": [
+     15,
+     -3,
+     3,
+     0,
+     -1
+    ]
+   },
+   {
+    "cokernel_character": [
+     21,
+     -3,
+     -3,
+     0,
+     1
+    ],
+    "dimension": 21,
+    "equal": true,
+    "n": 8,
+    "sign_x_Sym^(n-3)(std)": [
+     21,
+     -3,
+     -3,
+     0,
+     1
+    ]
+   },
+   {
+    "cokernel_character": [
+     28,
+     -4,
+     4,
+     1,
+     0
+    ],
+    "dimension": 28,
+    "equal": true,
+    "n": 9,
+    "sign_x_Sym^(n-3)(std)": [
+     28,
+     -4,
+     4,
+     1,
+     0
+    ]
+   },
+   {
+    "cokernel_character": [
+     36,
+     -4,
+     -4,
+     0,
+     0
+    ],
+    "dimension": 36,
+    "equal": true,
+    "n": 10,
+    "sign_x_Sym^(n-3)(std)": [
+     36,
+     -4,
+     -4,
+     0,
+     0
+    ]
+   },
+   {
+    "cokernel_character": [
+     45,
+     -5,
+     5,
+     0,
+     -1
+    ],
+    "dimension": 45,
+    "equal": true,
+    "n": 11,
+    "sign_x_Sym^(n-3)(std)": [
+     45,
+     -5,
+     5,
+     0,
+     -1
+    ]
+   },
+   {
+    "cokernel_character": [
+     55,
+     -5,
+     -5,
+     1,
+     1
+    ],
+    "dimension": 55,
+    "equal": true,
+    "n": 12,
+    "sign_x_Sym^(n-3)(std)": [
+     55,
+     -5,
+     -5,
+     1,
+     1
+    ]
+   }
+  ]
+ },
+ "description": "Lean ambient spaces W_n = P_{n+2} + Delta4 P_{n-3} and the S4 character of the cokernel of M_{3,n} on P_{n+2}",
+ "lean_space_n4_explicit": {
+  "N": 80,
+  "method": "exact_rational_elimination",
+  "moment_rank": 80,
+  "space": "P_6 + span{Delta4 l_i, i=0..3}",
+  "sum_i Delta4 l_i = Delta4 in P_6": true,
+  "surjective": true
+ },
+ "lean_spaces": [
+  {
+   "N": 50,
+   "dim_P_n+2": 56,
+   "dim_W_n": 57,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 57,
+   "dim_matches": true,
+   "dim_method": "exact_rational_elimination",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 50,
+   "n": 3,
+   "rank_method": "exact_rational_elimination",
+   "spanning_set_size": 57,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 1
+  },
+  {
+   "N": 80,
+   "dim_P_n+2": 84,
+   "dim_W_n": 87,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 87,
+   "dim_matches": true,
+   "dim_method": "exact_rational_elimination",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 80,
+   "n": 4,
+   "rank_method": "exact_rational_elimination",
+   "spanning_set_size": 88,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 3
+  },
+  {
+   "N": 119,
+   "dim_P_n+2": 120,
+   "dim_W_n": 126,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 126,
+   "dim_matches": true,
+   "dim_method": "modular_rank_p_2^61-1_lower_bound",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 119,
+   "n": 5,
+   "rank_method": "modular_rank_p_2^61-1_lower_bound",
+   "spanning_set_size": 130,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 6
+  },
+  {
+   "N": 168,
+   "dim_P_n+2": 165,
+   "dim_W_n": 175,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 175,
+   "dim_matches": true,
+   "dim_method": "modular_rank_p_2^61-1_lower_bound",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 168,
+   "n": 6,
+   "rank_method": "modular_rank_p_2^61-1_lower_bound",
+   "spanning_set_size": 185,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 10
+  },
+  {
+   "N": 228,
+   "dim_P_n+2": 220,
+   "dim_W_n": 235,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 235,
+   "dim_matches": true,
+   "dim_method": "modular_rank_p_2^61-1_lower_bound",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 228,
+   "n": 7,
+   "rank_method": "modular_rank_p_2^61-1_lower_bound",
+   "spanning_set_size": 255,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 15
+  },
+  {
+   "N": 300,
+   "dim_P_n+2": 286,
+   "dim_W_n": 307,
+   "dim_W_n_expected_C(n+5,3)+(n-1)(n-2)/2": 307,
+   "dim_matches": true,
+   "dim_method": "modular_rank_p_2^61-1_lower_bound",
+   "kernel_dim_on_W_n": 7,
+   "kernel_on_W_n_is_the_seven_ridges": true,
+   "moment_rank_on_W_n": 300,
+   "n": 8,
+   "rank_method": "modular_rank_p_2^61-1_lower_bound",
+   "spanning_set_size": 342,
+   "surjective_on_W_n": true,
+   "top_degree_directions": 21
+  }
+ ],
+ "prime": "2^61-1",
+ "projected_elements": [
+  {
+   "Delta4_o_sigma=sgn(sigma)Delta4": true,
+   "N": 80,
+   "a_B(Delta4*mono, z)=0_all_ridges": true,
+   "a_B(Delta4, z)=0_all_ridges": true,
+   "contains_P_m-1": true,
+   "dim": 80,
+   "dim_method": "exact_rational_elimination",
+   "gram_nonsingular": true,
+   "invariant_under_all_24_vertex_permutations": true,
+   "m": 6,
+   "moment_rank": 80,
+   "n": 4,
+   "projected_P_m_a_B_orthogonal_to_ridges": true,
+   "rank_method": "exact_rational_elimination",
+   "ridges_permuted_up_to_sign_all_24": true,
+   "space": "Pi_6(P_6) + Delta4 * (degree-1 barycentric monomials)",
+   "unisolvent": true
+  },
+  {
+   "Delta4_o_sigma=sgn(sigma)Delta4": true,
+   "N": 119,
+   "a_B(Delta4*mono, z)=0_all_ridges": true,
+   "a_B(Delta4, z)=0_all_ridges": true,
+   "contains_P_m-1": true,
+   "dim": 119,
+   "dim_method": "modular_rank_p_2^61-1_lower_bound",
+   "gram_nonsingular": true,
+   "invariant_under_all_24_vertex_permutations": true,
+   "m": 7,
+   "moment_rank": 119,
+   "n": 5,
+   "projected_P_m_a_B_orthogonal_to_ridges": true,
+   "rank_method": "modular_rank_p_2^61-1_lower_bound",
+   "ridges_permuted_up_to_sign_all_24": true,
+   "space": "Pi_7(P_7) + Delta4 * (degree-2 barycentric monomials)",
+   "unisolvent": true
+  }
+ ]
+}

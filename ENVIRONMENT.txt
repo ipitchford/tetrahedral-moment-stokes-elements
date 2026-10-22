@@ -1,0 +1,6 @@
+Authoring and replay environment (22 October 2026)
+OS: macOS (Apple silicon)
+Python 3.12+ (replayed with 3.13); exact scripts need the standard library and SymPy; the numerical script also needs NumPy and SciPy
+LaTeX: pdfLaTeX (TeX Live), inline thebibliography, two passes
+code/verify_all.py regenerates every certificate in a temporary directory and compares it byte for byte with the shipped file and SHA256SUMS. The full run needs about 5 minutes and about 7 GB RAM; --skip-numerical runs the exact certificates only (about 1 minute).
+Byte identity of all certificates was confirmed on the authoring machine and in a separate clean replay. The numerical certificate is rounded to 4 significant digits; another BLAS or platform could in principle change a last digit. The exact certificates do not depend on floating-point details.
